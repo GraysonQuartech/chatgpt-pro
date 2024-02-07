@@ -70,24 +70,6 @@ const SideBar = () => {
           <ToggleTheme open={open} />
         </li>
         <li>
-          <a
-            href='https://www.buymeacoffee.com/eyuel'
-            rel='noreferrer'
-            target='_blank'>
-            <MdOutlineCoffee size={15} />
-            <p className={`${!open && 'hidden'}`}>Support this project</p>
-          </a>
-        </li>
-        <li>
-          <a
-            rel='noreferrer'
-            target='_blank'
-            href='https://github.com/EyuCoder/chatgpt-clone'>
-            <AiOutlineGithub size={15} />
-            <p className={`${!open && 'hidden'}`}>Github</p>
-          </a>
-        </li>
-        <li>
           <a onClick={() => setModalOpen(true)}>
             <MdOutlineVpnKey size={15} />
             <p className={`${!open && 'hidden'}`}>OpenAI Key</p>
