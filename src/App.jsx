@@ -1,9 +1,9 @@
 import { ChatContextProvider } from './context/chatContext';
-import SideBar from './components/SideBar';
-import ChatView from './components/ChatView';
+import SideBar from './components/SideBar/SideBar';
+import ChatView from './components/Chat/ChatView';
 import { useEffect, useState } from 'react';
-import Modal from './components/Modal';
-import Setting from './components/Setting';
+import Modal from './components/SideBar/Modal.jsx';
+import Setting from './components/SideBar/Setting';
 
 const App = () => {
   const [modalOpen, setModalOpen] = useState(false);

@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import { MdComputer, MdPerson } from 'react-icons/md';
 import moment from 'moment';
-import Image from '../Image';
-import Markdown from './Markdown';
+import Image from './Image';
+import Markdown from '../../utils/Markdown';
 
 /**
  * A chat message component that displays a message with a timestamp and an icon.

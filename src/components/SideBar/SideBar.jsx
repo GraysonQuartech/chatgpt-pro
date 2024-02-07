@@ -8,7 +8,7 @@ import {
 } from 'react-icons/md';
 import { AiOutlineGithub } from 'react-icons/ai';
 import { ChatContext } from '../../context/chatContext';
-import bot from '../assets/logo.svg';
+import bot from '../../assets/logo.svg';
 import ToggleTheme from './ToggleTheme';
 import Modal from './Modal';
 import Setting from './Setting';
