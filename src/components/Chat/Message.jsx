@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { MdComputer, MdPerson } from 'react-icons/md';
 import moment from 'moment';
-import Image from './Image';
+import Image from '../Image';
 import Markdown from './Markdown';
 
 /**

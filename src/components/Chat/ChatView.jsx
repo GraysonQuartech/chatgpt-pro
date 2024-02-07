@@ -1,12 +1,12 @@
 import { useState, useRef, useEffect, useContext } from 'react';
 import Message from './Message';
-import { ChatContext } from '../context/chatContext';
-import Thinking from './Thinking';
+import { ChatContext } from '../../context/chatContext';
+import Thinking from '../Thinking';
 import { MdSend } from 'react-icons/md';
 import { replaceProfanities } from 'no-profanity';
-import { davinci } from '../utils/davinci';
-import { dalle } from '../utils/dalle';
-import Modal from './Modal';
+import { davinci } from '../../utils/davinci';
+import { dalle } from '../../utils/dalle';
+import Modal from '../SideBar/Modal';
 import Setting from './Setting';
 
 const options = ['ChatGPT', 'DALL·E'];
