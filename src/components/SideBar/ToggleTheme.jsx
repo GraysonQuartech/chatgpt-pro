@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import useDarkMode from '../../hooks/useDarkMode';
+import useDarkMode from '../SideBar/relatedHooks/useDarkMode';
 import { MdOutlineNightlight, MdOutlineWbSunny } from 'react-icons/md';
 
 /**
