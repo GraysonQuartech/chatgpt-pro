@@ -5,7 +5,8 @@ import {
   MdOutlineCoffee,
   MdOutlineVpnKey,
   MdDelete,
-  MdExitToApp, // Import the sign-out icon
+  MdExitToApp,
+  MdOutlineChat, // Import the new chat icon
 } from 'react-icons/md';
 import { AiOutlineGithub } from 'react-icons/ai';
 import { ChatContext } from '../../context/chatContext';
@@ -48,6 +49,9 @@ const SideBar = ({ onSignOut }) => {
     }
     // Additional sign-out logic can be added here if needed
   }
+  function newChatClicked() {
+    
+  }
 
   return (
     <section
@@ -77,6 +81,12 @@ const SideBar = ({ onSignOut }) => {
           <a className='border border-slate-500' onClick={clear}>
             <MdDelete size={15} />
             <p className={`${!open && 'hidden'}`}>Clear chat</p>
+          </a>
+        </li>
+        <li>
+          <a className='border border-slate-500' onClick={newChatClicked}>
+            <MdOutlineChat size={15} />
+            <p className={`${!open && 'hidden'}`}>New chat</p>
           </a>
         </li>
       </ul>
