@@ -39,6 +39,12 @@ kc.init({
   console.error('Authentication Failed!');
 });
 ///////////////////////////////////////////////////////////////////////////////////////////
+function handleSignOut() {
+  // Add your sign-out logic here
+  console.log('User signed out');
+  kc.logout();
+  //setAuthenticated(false);
+}
 
 const App = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -49,13 +55,16 @@ const App = () => {
       setModalOpen(true);
     }
   }, []);
+
+
+
   return (
     <ChatContextProvider>
       <Modal title='Setting' modalOpen={modalOpen} setModalOpen={setModalOpen}>
         <Setting modalOpen={modalOpen} setModalOpen={setModalOpen} />
       </Modal>
       <div className='flex transition duration-500 ease-in-out'>
-        <SideBar />
+        <SideBar onSignOut={handleSignOut} />
         <ChatView />
       </div>
     </ChatContextProvider>

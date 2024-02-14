@@ -14,13 +14,14 @@ import ToggleTheme from './ToggleTheme';
 import Modal from './Modal';
 import Setting from './Setting';
 
+
 /**
  * A sidebar component that displays a list of nav items and a toggle
  * for switching between light and dark modes.
  *
  * @param {Object} props - The properties for the component.
  */
-const SideBar = () => {
+const SideBar = ({ onSignOut }) => {
   const [open, setOpen] = useState(true);
   const [, , clearChat] = useContext(ChatContext);
   const [modalOpen, setModalOpen] = useState(false);
@@ -37,9 +38,15 @@ const SideBar = () => {
     clearChat();
   }
 
-  // Implement the sign-out functionality here
-  function signOut() {
-    // Your sign-out logic goes here
+  //if a user clicks sign out
+  function signOut(event) {
+    event.preventDefault(); // Prevent default anchor tag behavior
+
+    // Call the sign-out handler function passed from the parent component
+    if (onSignOut) {
+      onSignOut();
+    }
+    // Additional sign-out logic can be added here if needed
   }
 
   return (
