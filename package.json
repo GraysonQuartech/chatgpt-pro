@@ -19,6 +19,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "keycloak-js": "^23.0.6",
     "langchain": "^0.0.155",
     "moment": "^2.29.4",
     "no-profanity": "^1.5.1",

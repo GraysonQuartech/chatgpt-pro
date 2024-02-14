@@ -5,6 +5,7 @@ import {
   MdOutlineCoffee,
   MdOutlineVpnKey,
   MdDelete,
+  MdExitToApp, // Import the sign-out icon
 } from 'react-icons/md';
 import { AiOutlineGithub } from 'react-icons/ai';
 import { ChatContext } from '../../context/chatContext';
@@ -36,22 +37,30 @@ const SideBar = () => {
     clearChat();
   }
 
+  // Implement the sign-out functionality here
+  function signOut() {
+    // Your sign-out logic goes here
+  }
+
   return (
     <section
       className={`${
         open ? 'w-72' : 'w-16'
-      } bg-neutral flex flex-col items-center gap-y-4 h-screen pt-4 relative duration-100 shadow-md`}>
+      } bg-neutral flex flex-col items-center gap-y-4 h-screen pt-4 relative duration-100 shadow-md`}
+    >
       <div className='flex items-center justify-between w-full px-2 mx-auto'>
         <div
           className={` ${
             !open && 'scale-0 hidden'
-          } flex flex-row items-center gap-2 mx-auto w-full`}>
+          } flex flex-row items-center gap-2 mx-auto w-full`}
+        >
           <img src={bot} alt='logo' className='w-6 h-6' />
           <h1 className={` ${!open && 'scale-0 hidden'}`}>ChatGPT</h1>
         </div>
         <div
           className='mx-auto btn btn-square btn-ghost'
-          onClick={() => setOpen(!open)}>
+          onClick={() => setOpen(!open)}
+        >
           {open ? <MdClose size={15} /> : <MdMenu size={15} />}
         </div>
       </div>
@@ -73,6 +82,13 @@ const SideBar = () => {
           <a onClick={() => setModalOpen(true)}>
             <MdOutlineVpnKey size={15} />
             <p className={`${!open && 'hidden'}`}>OpenAI Key</p>
+          </a>
+        </li>
+        <li>
+          {/* Sign-out button */}
+          <a onClick={signOut}>
+            <MdExitToApp size={15} />
+            <p className={`${!open && 'hidden'}`}>Sign Out</p>
           </a>
         </li>
       </ul>
